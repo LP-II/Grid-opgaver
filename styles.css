@@ -1,0 +1,233 @@
+*{
+  margin: 0;
+}
+
+body{
+  background-color: #0a192e;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  grid-template-rows: 0.4fr repeat(4, 2fr) 0.8fr 0.4fr;
+  gap: 0px 0px;
+  height: 2000px;
+  max-width: 60%;
+  max-height: 2000px;
+  width: 60%;
+  margin: 0 auto;
+  grid-template-areas:
+    "NAV NAV NAV"
+    "IMG1 TEKST1 MAINSIDE"
+    "TEKST2 IMG2 MAINSIDE"
+    "IMG3 TEKST3 MAINSIDE"
+    "TEKST4 IMG4 ."
+    "TEKST5 TEKST5 ."
+    "FOOTER FOOTER FOOTER";
+}
+
+#NAV { 
+  grid-area: NAV; 
+  background-color: #172b4e;
+  display: flex;
+  width: 90.3%;
+}
+
+#IMG1 { 
+  grid-area: IMG1;
+  margin-top: 20px; 
+  background-image: url(img/post1.jpg);
+}
+
+#TEKST1 { 
+  grid-area: TEKST1; 
+  margin-top: 20px;
+  background-color: #b71757;
+}
+
+#TEKST2 { 
+  grid-area: TEKST2;
+  background-color: #0e7e72; 
+}
+
+#IMG2 { 
+  grid-area: IMG2;
+  background-image: url(img/post2.jpg); 
+}
+
+#IMG3 { 
+  grid-area: IMG3;
+  background-image: url(img/post3.jpg); 
+}
+
+#TEKST3 { 
+  grid-area: TEKST3;
+  background-color: #b1650d; 
+}
+
+#TEKST4 { 
+  grid-area: TEKST4; 
+  background-color: #d12766;
+}
+
+#IMG4 { 
+  grid-area: IMG4;
+  background-image: url(img/post4.jpg); 
+}
+
+#TEKST5 { 
+  grid-area: TEKST5; 
+  background-color: #2d95bc;
+}
+
+#FOOTER { 
+  grid-area: FOOTER; 
+  margin-top: 20px;
+  background-color: #172b4e;
+  width: 90.3%
+}
+
+#MAINSIDE {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0px 0px;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 20px;
+  grid-template-areas:
+    "TOP TOP ."
+    "BOT BOT .";
+  grid-area: MAINSIDE;
+}
+
+#TOP {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.8fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "TOPIMG TOPIMG TOPIMG"
+    "TOPTEKST TOPTEKST TOPTEKST";
+  grid-area: TOP;
+}
+
+#TOPIMG { 
+  grid-area: TOPIMG; 
+  background-image: url(img/news1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  
+}
+
+#TOPTEKST { 
+  grid-area: TOPTEKST; 
+  background-color: white;
+  
+}
+
+#BOT {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.8fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "BOTIMG BOTIMG BOTIMG"
+    "BOTTEKST BOTTEKST BOTTEKST";
+  grid-area: BOT;
+}
+
+#BOTIMG { 
+  grid-area: BOTIMG; 
+  margin-top: 20px;
+  background-image: url(img/news2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+}
+
+#BOTTEKST { 
+  grid-area: BOTTEKST;
+  background-color: white;
+}
+
+
+
+nav{
+display: flex;
+  color: white;
+  padding-left: 60%;
+}
+
+nav p{
+padding: 20px;
+}
+
+nav p:hover{
+  background-color: #0a192e;
+}
+
+h1{
+  padding-top: 20px;
+  color: white;
+}
+
+.maintekst{
+  padding: 20px;
+}
+
+.maintekst h2{
+  color: white;
+  font-size: 3em
+}
+
+.maintekst p{
+  color: white;
+  padding-top: 20px;
+  width: 70%;
+}
+
+#text5{
+  padding: 20px;
+}
+
+#text5 h2{
+  color: white;
+  font-size: 3em;
+}
+
+#text5 p{
+  color: white;
+}
+
+#sidetext{
+  text-align: center;
+  padding: 20px;
+}
+
+#sidetext h3{
+  font-size: 2em;
+}
+
+#sidetext p{
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, 2fr);
+    grid-template-areas: 
+    "IMG1"
+    "TEKST1"
+    "IMG2"
+    "TEKST2"
+    "IMG3"
+    "TEKST3"
+    "IMG3"
+    "TEKST4"
+    "MAINSIDE"
+    "FOOTER";
+  }
+}
